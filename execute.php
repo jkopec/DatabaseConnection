@@ -12,17 +12,17 @@ if(isset($_GET['db']))
 {
     switch ($_GET['db']):
         case 'oo':
-            echo "<h3>MySQLi Object Oriented </h3>";
+            echo "<h3 id='oo'>MySQLi Object Oriented</h3>";
             Test::mysqli_oo_test();
             break;
 
         case 'proc':
-            echo "<h3>MySQLi Procedural </h3>";
+            echo "<h3 id='proc'>MySQLi Procedural</h3>";
             Test::mysqli_procedural_test();
             break;
 
         case 'pdo':
-            echo "<h3>PDO </h3>";
+            echo "<h3 id='pdo'>PDO</h3>";
             Test::pdo_test();
             break;
 
@@ -34,7 +34,7 @@ if(isset($_GET['db']))
 }
 else
 {
-    echo "<h3>PDO </h3>";
+    echo "<h3 id='pdo'>PDO </h3>";
     Test::pdo_test();
 }
 

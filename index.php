@@ -24,9 +24,9 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="?db=pdo">PDO</a></li>
-                <li><a href="?db=proc">MySQLi Procedural</a></li>
-                <li><a href="?db=oo">MySQLi Object Oriented</a></li>
+                <li><a id="pdo" href="?db=pdo">PDO</a></li>
+                <li><a id="proc" href="?db=proc">MySQLi Procedural</a></li>
+                <li><a id="oo" href="?db=oo">MySQLi Object Oriented</a></li>
             </ul>
         </div>
     </div>
@@ -43,6 +43,15 @@
     include ("execute.php");
     ?> 
 </div>
+
+<script>
+    $(function() {
+        $(".nav").find(".active").removeClass("active");
+        $current = $('h3').attr('id');
+        $('#'+$current).parent().addClass('active');
+    });
+</script>
+
 </body>
 </html>
 
