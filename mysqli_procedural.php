@@ -36,7 +36,7 @@ class MySQLi_Procedural_Type extends Config
         {
             die("Connection failed: " . mysqli_connect_error());
         }
-        echo "Connection successful!" . "<br />";
+        echo "Connected successfully!" . "<br />";
     }
     
     public function getConnection()

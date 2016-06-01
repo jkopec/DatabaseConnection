@@ -18,14 +18,24 @@ class Test
 
         if ($result->num_rows>0)
         {
-            echo "<b>Die Daten der Tabelle 'MyGuests':</b>" . "<br />";
+            echo "<table border='1'>
+                  <tr>
+                    <th>ID</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Date</th>
+                  </tr>";
 
             while ($row = $result->fetch_assoc()){
-                echo "<b>ID:</b> " . $row['id'] . "<br />";
-                echo "<b>Firstname:</b> " . $row['firstname'] . "<br />";
-                echo "<b>Lastname:</b> " . $row['lastname'] . "<br />";
-                echo "<b>Date:</b> " . $row['reg_date'] . "<br />";
+                echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td> " . $row['firstname'] . "</td>";
+                echo "<td> " . $row['lastname'] . "</td>";
+                echo "<td> " . $row['reg_date'] . "<td>";
+                echo "<tr>";
             }
+
+            echo "</table>";
         }
         else
         {
@@ -43,14 +53,24 @@ class Test
 
         if (mysqli_num_rows($result) > 0)
         {
-            echo "<b>Die Daten der Tabelle 'MyGuests':</b>" . "<br />";
+            echo "<table border='1'>
+                  <tr>
+                    <th>ID</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Date</th>
+                  </tr>";
 
             while ($row = mysqli_fetch_assoc($result)){
-                echo "<b>ID:</b> " . $row['id'] . "<br />";
-                echo "<b>Firstname:</b> " . $row['firstname'] . "<br />";
-                echo "<b>Lastname:</b> " . $row['lastname'] . "<br />";
-                echo "<b>Date:</b> " . $row['reg_date'] . "<br />";
+                echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td> " . $row['firstname'] . "</td>";
+                echo "<td> " . $row['lastname'] . "</td>";
+                echo "<td> " . $row['reg_date'] . "<td>";
+                echo "<tr>";
             }
+
+            echo "</table>";
         }
         else
         {
@@ -71,14 +91,24 @@ class Test
             
             if(count($result)>0)
             {
-                echo "<b>Die Daten der Tabelle 'MyGuests':</b>" . "<br />";
+                echo "<table border='1'>
+                  <tr>
+                    <th>ID</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Date</th>
+                  </tr>";
 
                 foreach ($result as $row){
-                    echo "<b>ID:</b> " . $row['id'] . "<br />";
-                    echo "<b>Firstname:</b> " . $row['firstname'] . "<br />";
-                    echo "<b>Lastname:</b> " . $row['lastname'] . "<br />";
-                    echo "<b>Date:</b> " . $row['reg_date'] . "<br />";
+                    echo "<tr>";
+                    echo "<td>" . $row['id'] . "</td>";
+                    echo "<td> " . $row['firstname'] . "</td>";
+                    echo "<td> " . $row['lastname'] . "</td>";
+                    echo "<td> " . $row['reg_date'] . "<td>";
+                    echo "<tr>";
                 }
+                
+                echo "</table>";
             }
             else
             {
